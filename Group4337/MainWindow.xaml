@@ -8,53 +8,22 @@
         Title="Инструментальные Средства Разработки Программного Обеспечения" 
         Height="700" 
         Width="800">
-    <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <TextBlock Text="Студенты группы 4337"
-                       HorizontalAlignment="Center"
+        <TextBlock Text="Студент группы 4337 Казаков"
+                       HorizontalAlignment="Right"
                        VerticalAlignment="Center"
                        FontSize="15px" 
                        Grid.Row="0" />
-
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-
-                <!-- Места для добавления элементов управления -->
-
-                <!---->
-
-            </Grid>
-        </Grid>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Center" >
+            <Button x:Name="btnImport" Content="Импорт данных" Width="120" Height="30" Margin="5" Click="btnImport_Click"/>
+            <Button x:Name="btnExport" Content="Экспорт в Excel" Width="120" Height="30" Margin="5" Click="btnExport_Click"/>
+            <TextBlock x:Name="txtStatus" Text="Готов к работе" VerticalAlignment="Center"/>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="dgEmployees" AutoGenerateColumns="True" Margin="0,0,0,10"/>
     </Grid>
 </Window>
